@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){var n;return n=$("input.focus"),n.focus()})}).call(this);

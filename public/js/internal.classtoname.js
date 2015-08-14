@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){return $("#type").change(function(){return 0!==$(this).val()?$("#name").val($("option[value="+$(this).val()+"]").text()):void 0})})}).call(this);

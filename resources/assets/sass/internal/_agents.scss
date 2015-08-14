@@ -1,0 +1,10 @@
+.agent-active {
+    .fa-check {
+        color: $brand-success;
+    }
+}
+.agent-inactive {
+    .fa-times {
+        color: $brand-danger;
+    }
+}

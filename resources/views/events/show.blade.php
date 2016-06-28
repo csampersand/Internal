@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div id="add-entry-form">
-                {!! Form::open(['url' => action('EntryController@store', $event->id)]) !!}
+                {!! Form::open(['url' => action('EventController@link_agent', $event->id)]) !!}
                     <div class="form-group">
                         <div class="input-group input-group">
                             {!! Form::text('name', null, ['id' => 'name', 'class' => 'focus form-control', 'placeholder' => 'Full Name']) !!}

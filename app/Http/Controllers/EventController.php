@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Agent;
-use App\Entry;
 use App\Event;
 use App\Lesson;
 use Illuminate\Database\Eloquent\Collection;
@@ -107,5 +106,22 @@ class EventController extends Controller
         flash()->success('Deleted', 'The event was deleted successfully.');
 
         return redirect()->action('EventController@index');
+    }
+
+    public function link_agent($id, Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|exists:agents,name'
+        ]);
+
+        $agent = Agent::where('name', $request->input('name'))->first();
+        $event = Event::find($id);
+
+        // Prevent duplicate entries
+        if (!$event->agents()->where('agent_id', $agent->id)->exists()) {
+            $event->agents()->save($agent);
+        }
+
+        return redirect(action('EventController@show', $id));
     }
 }

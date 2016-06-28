@@ -30,6 +30,7 @@ Route::get('home', function() {
 });
 
 Route::resource('events', 'EventController');
+Route::post('events/{id}', 'EventController@link_agent');
 
 Route::resource('agents', 'AgentController');
 
@@ -37,7 +38,6 @@ Route::get('logs', function() {
     return redirect()->action('EntryController@index', 1);
 });
 Route::get('logs/{page}', 'EntryController@index');
-Route::post('events/{id}', 'EntryController@store');
 Route::delete('events/{id}', 'EntryController@delete');
 
 Route::get('export', function() {

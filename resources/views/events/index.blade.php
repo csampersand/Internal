@@ -17,7 +17,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Event Count</th>
+                        <th>Attendees</th>
                         <th>Date</th>
                     </tr>
                 </thead>

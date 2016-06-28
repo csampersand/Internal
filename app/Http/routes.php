@@ -22,7 +22,7 @@ Route::controllers([
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('about');
 });
 
 Route::get('about', function () {

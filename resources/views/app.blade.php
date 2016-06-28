@@ -31,7 +31,7 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="about"><i class="fa fa-question-circle fa-fw"></i> About</a></li>
+                        <li><a href="/about"><i class="fa fa-question-circle fa-fw"></i> About</a></li>
                     </ul>
                 </div>
             </div>

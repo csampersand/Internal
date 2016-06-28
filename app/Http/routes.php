@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('home', function() {
-    return redirect()->action('AgentController@index');
+    return redirect()->action('EventController@index');
 });
 
 Route::resource('events', 'EventController');

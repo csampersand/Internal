@@ -25,7 +25,7 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        {{-- <li><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li> --}}
                         <li><a href="{{ action('EventController@index') }}"><i class="fa fa-calendar fa-fw"></i> Events</a></li>
                         <li><a href="{{ action('AgentController@index') }}"><i class="fa fa-user fa-fw"></i> Agents</a></li>
                     </ul>

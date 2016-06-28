@@ -8509,17 +8509,16 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 .navbar {
-  padding: 0 15px 0 15px; }
+  padding: 0 25px 0; }
 
 #wrap > .container {
   padding: 60px 15px 0 15px; }
 
-.container p {
-  margin: 20px 0; }
-
-#footer > .container {
+#footer .container {
   padding-left: 15px;
   padding-right: 15px; }
+#footer p {
+  margin: 20px 0; }
 
 .stat {
   margin-bottom: 15px; }

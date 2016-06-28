@@ -47,7 +47,7 @@
     </head>
     <body>
         <div class="container">
-            <a href="{{ url(action('EventController@index')) }}" class="entrance"></a>
+            <a href="{{ url(action('HomeController@index')) }}" class="entrance"></a>
             <div class="content">
                 <div class="title">Internal</div>
             </div>

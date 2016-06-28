@@ -34,7 +34,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        $lessons = array_merge(['Unique Event (default)'], Lesson::orderBy('id')->lists('name')->toArray());
+        $lessons = array_merge(['Unique Event (default)'], Lesson::orderBy('id')->lists('name', 'id')->toArray());
 
         return view('events.create', compact('lessons'));
     }
@@ -48,7 +48,9 @@ class EventController extends Controller
     {
         $event = Event::create($request->all());
 
-        return redirect(action('EventController@show', $event));
+        flash()->success('Created', 'The event was created successfully.');
+
+        return redirect()->action('EventController@index');
     }
 
     /**
@@ -87,6 +89,8 @@ class EventController extends Controller
     {
         $event->update($request->all());
 
+        flash()->success('Updated', 'The event was updated successfully.');
+
         return redirect()->action('EventController@show', $event);
     }
 
@@ -99,6 +103,8 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         $event->delete();
+
+        flash()->success('Deleted', 'The event was deleted successfully.');
 
         return redirect()->action('EventController@index');
     }

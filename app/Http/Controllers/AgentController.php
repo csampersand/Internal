@@ -45,7 +45,9 @@ class AgentController extends Controller
     public function store(AgentRequest $request)
     {
         $agent = Agent::create($request->all());
+
         flash()->success('Created', 'The agent as been created.');
+
         return redirect()->action('AgentController@show', $agent);
     }
 

@@ -29,7 +29,7 @@ body {
 /* Not required for template or sticky footer method. */
 
 .navbar {
-  padding: 0 15px 0 15px;
+  padding: 0 25px 0;
 }
 
 // .navbar-brand {
@@ -39,11 +39,13 @@ body {
 #wrap > .container {
   padding: 60px 15px 0 15px;
 }
-.container p {
-  margin: 20px 0;
-}
 
-#footer > .container {
-  padding-left: 15px;
-  padding-right: 15px;
+#footer {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  p {
+    margin: 20px 0;
+  }
 }

@@ -26,7 +26,7 @@ class EventRequest extends Request
         return [
             'name' => 'required|min:3',
             'date' => 'required',
-            'lesson_id' => 'required|integer'
+            'lesson_id' => 'required|integer' . ($this->input('lesson_id') != 0 ? '|exists:lessons,id' : '')
         ];
     }
 }

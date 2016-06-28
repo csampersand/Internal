@@ -67,7 +67,7 @@
             <div id="add-entry-form">
                 {!! Form::open(['url' => action('EntryController@store', $event->id)]) !!}
                     <div class="form-group">
-                        <div class="input-group input-group-sm">
+                        <div class="input-group input-group">
                             {!! Form::text('name', null, ['id' => 'name', 'class' => 'focus form-control', 'placeholder' => 'Full Name']) !!}
                             <span class="input-group-btn">
                                 {!! Form::submit('Add', ['class' => 'btn btn-primary form-control']) !!}
